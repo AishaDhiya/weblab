@@ -1,0 +1,225 @@
+<!doctypehtml>
+<html>
+	<head>
+	<title>exercise6</title>
+	<script lang="javascript">
+	function length(){
+		a=document.getElementById('s1').value;
+		b=a.length;
+		alert("LENGTH OF STRING ="+b);
+		}
+	
+	function indexof(){
+		a=document.getElementById('s1').value;
+		b=prompt("enter the character=");
+		c=a.indexof(b);
+		alert("INDEX OF"+b+"="+C);
+		
+		}
+	function round(){
+		a=document.getElementById('n1').value;
+		b=math.round(a);
+		alert(b);
+	}
+	function pOwer(){
+		a=document.getElementById('n1').value;
+		b=prompt("enter the power=");
+		c=math.pow(a,b);
+		alert("POWER="+C);
+	}
+	
+		function lastindexof(){
+		a=document.getElementById('s1').value;
+		b=prompt("enter the character=");
+		c=a.lastindexof(b);
+		alert(" LAST INDEX OF"+b+"="+C);
+	}
+		function search(){
+		a=document.getElementById('s1').value;
+		b=prompt("enter the character=");
+		c=a.search(b);
+		alert(b+"IS PRESENT AT POSITION"+C);
+	}
+		function squareroot(){
+		a=document.getElementById('n1').value;
+		b=math.squareroot(a);
+		alert("SQUAREROOT="+b);
+	}
+	function ABS(){
+		a=document.getElementById('n1').value;
+		b=math.ABS(a);
+		alert("\ABSOLUTE="+b);
+	}
+	function slice()
+   {
+        a=document.getElementById('s1').value;
+        b=prompt("Enter the Starting index ");
+        c=prompt("Enter the Ending index ");
+        if ((b=="")&&(c==""))
+    {
+     d="Undefined Index";
+    }
+    else if (b=="")
+	
+	{
+    d=a.slice(0,c);
+}
+    else if (c=="")
+{
+    d=a.slice(b,a.length);
+    }
+  else
+  {
+       d=a.slice(b,c);
+   }
+    alert("NEW STRING = "+d);
+	
+   }
+         function substring()
+   {
+         a=document.getElementById('s1').value;
+         b=prompt("Enter the Starting index ");
+         c=prompt("Enter the Ending index ");
+         if ((b=="")&&(c==""))
+   {
+  d="Undefined Index";
+   }
+  else if (b=="")
+   {
+   d=a.substring(0,c);
+  }
+  else if (c=="")
+   {
+         d=a.substring(b,a.length);
+   }
+   else
+{
+        d=a.substring(b,c);
+}
+        alert("NEW STRING = "+d);              
+   }
+        function replace()
+   {
+        a=document.getElementById('s1').value;
+        b=prompt("Enter old String ");
+        c=prompt("Enter new String ");
+        d=a.replace(b,c);
+        alert("NEW STRING = "+d);
+
+}
+       function ceil()
+	{
+		a=document.getElementById('n1').value;
+		b=math.ceil(a);
+		alert("CEIL="+b);
+	}
+	
+	
+       function floor()
+	{
+		a=document.getElementById('n1').value;
+		b=math.floor(a);
+		alert("FLOOR="+b);
+	}
+	function substr(){
+		a=document.getElementById('s1').value;
+        b=prompt("Enter the Starting index ");
+        c=prompt("Enter the length");
+        d=a.sbstr(b,c);
+        alert("NEWSTRING="+d);
+	}
+	function replace(){
+		a=document.getElementById('s1').value;
+        b=prompt("Enter old string ");
+        c=prompt("Enter new string");
+        d=a.sbstr(b,c);
+        alert("NEWSTRING="+d);
+	}
+	function uppercase(){
+		a=document.getElementById('s1').value;
+		b=a.touppercase;
+		alert(b);
+		}
+		function lowercase(){
+		a=document.getElementById('s1').value;
+		b=a.tolowercase;
+		alert(b);
+		}
+		function random(){
+			alert(math.random());
+		}
+		function pi(){
+			alert(math.pi());
+		}
+		
+	</script>
+	
+	
+	</head>
+	<body>
+	<table align="center" width="75%">
+	<tr>
+	<th><mark>STRING FUNCTIONS</mark></th>
+	<th><mark>MATH FUNCTIONS</mark></th>
+	</tr>
+	<tr>
+		<th><h1>enter a string
+	<input type="text" id="s1"style="height:40px;width:60px"
+	
+	</h1> </th>
+	<br><br>
+	<th>
+	<h1>enter a number
+	<input type="text" id="n1"style="height:40px;width:60px"
+	
+	</h1> </th></tr>
+	<tr></tr>
+	<tr>
+	<th>
+	<input type="button name="btn1" value="LENGTH" style="height:50px; width:18%;" onclick="length()">&nbsp&nbsp&nbsp
+	<input type="button name="btn2" value="INDEXOF" style="height:50px; width:18%;" onclick="indexof()"></th>
+	<th>
+	<input type="button name="btna" value="ROUND" style="height:50px; width:18%;" onclick="round()">&nbsp&nbsp&nbsp
+	<input type="button name="btnb" value="POWEROF" style="height:50px; width:18%;" onclick="powerof()"></th>
+	<tr>
+	<th>
+	<input type="button name="btn3" value="LASTINDEXOF" style="height:50px; width:18%;" onclick="lastindexof()">&nbsp&nbsp&nbsp
+	<input type="button name="btn4" value="SEARCH" style="height:50px; width:18%;" onclick="search()"></th>
+	<th>
+	<input type="button name="btnc" value="SQUARE ROOT" style="height:50px; width:18%;" onclick="squareroot()">&nbsp&nbsp&nbsp
+	<input type="button name="btnd" value="ABS" style="height:50px; width:18%;" onclick="abs()"></th>
+	<tr>
+	<th>
+	<input type="button name="btn6" value="SLICE" style="height:50px; width:18%;" onclick="slice()">&nbsp&nbsp&nbsp
+	<input type="button name="btn7" value="SUBSTRING" style="height:50px; width:18%;" onclick="substring()"></th>
+	<th>
+	<input type="button name="btnc" value="CEIL" style="height:50px; width:18%;" onclick="ceil()">&nbsp&nbsp&nbsp
+	<input type="button name="btnd" value="FLOOR" style="height:50px; width:18%;" onclick="floor()"></th>
+	
+	</tr>
+	<tr>
+	<th>
+	<input type="button name="btn8" value="SUBSTR" style="height:50px; width:18%;" onclick="substr()">&nbsp&nbsp&nbsp
+	<input type="button name="btn9" value="REPLACE" style="height:50px; width:18%;" onclick="replace()"></th>
+	<th>
+	<input type="button name="btne" value="RANDOM" style="height:50px; width:18%;" onclick="random()">&nbsp&nbsp&nbsp
+	<input type="button name="btnf" value="PI" style="height:50px; width:18%;" onclick="pi()"></th>
+	
+	
+	</tr>
+	<tr>
+	<th>
+	<input type="button name="btn10" value="UPPER CASE" style="height:50px; width:18%;" onclick="lowercase()">&nbsp&nbsp&nbsp
+	<input type="button name="btn11" value="LOWER CASE" style="height:50px; width:18%;" onclick="uppercase()"></th>
+	
+	</tr>
+	
+	</table>
+	
+	
+	
+	
+	
+	
+	</body>
+</html>
