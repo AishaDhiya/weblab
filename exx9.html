@@ -1,0 +1,36 @@
+<html>
+<head><title>
+background
+</title>
+
+
+
+
+
+
+<body>
+<center>
+
+<button type="button" id="code" ><p><b>click me !!</b></p></button>
+</center>
+
+
+
+<script>
+document.getElementById("code").addEventListener("click",myfun);
+
+function myfun()
+{
+var randcol="";
+for(var i=0;i<6;i++)
+{
+   randcol+=Math.floor(Math.random()*10);
+}
+colorcode="#"+randcol;
+document.body.style.backgroundColor=colorcode;
+}
+
+</script>
+</body>
+</html>
+	
