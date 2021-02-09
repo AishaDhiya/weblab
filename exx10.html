@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>js:mouseover</title>
+</head>
+<body>
+<p id="body">
+<img src="965158106e9a30d0bd8d054b3c60001c.jpg" height=80% width=100% id="image">
+<h1 id="text">HELLO EVERYONE!</h1>
+</p>
+<script>
+document.getElementById("body").addEventListener("mouseover",transform1);
+document.getElementById("body").addEventListener("mouseout",transform2);
+function transform1()
+{
+document.getElementById("image").src="3a2e7cf7e429badc8edbf6e30f7f9d42.jpg";
+document.getElementById("text").innerHTML="CHOOSE HAPPINESS";
+}
+function transform2()
+{
+document.getElementById("image").src="965158106e9a30d0bd8d054b3c60001c.jpg";
+document.getElementById("text").innerHTML="HELLO EVERYONE!";
+}
+
+</script>
+</body>
+</html>
