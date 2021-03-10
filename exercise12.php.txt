@@ -1,0 +1,63 @@
+<?php
+$servername="localhost";
+$username="root";
+$password="";
+$dbname="exp";
+$conn=mysqli_connect($servername,$username,$password,$dbname);
+if(!$conn)
+{
+echo 'CONNECTION FAILED';
+}
+else
+{
+echo '<html>
+<body>
+<center>
+<form name="myform"method="post">
+<table border="2"style="height:70%;width:50%;">
+<tr><th colspan="2"><h1><u>STUDENT</u></h1></th></tr>
+<tr><td><h3>roll no</h3></td><td><input type="text"name="rollno"></td></tr>
+<tr><td><h3>name</td><td><input type="text"name="name"></td></tr></h3>
+<tr><td><h3>gender</td><td><input type="radio"name="gender"value="male">male<input type="radio"name="gender"value="female">female</tr>
+<tr><td><h3>mark</h3></td><td><input type="text"name="mark"></tr>
+<tr><td colspan="2"><input type="submit" name="submit"</td></tr>
+</table>
+</form>
+</center>
+</body>
+</html>';
+if(isset($_POST["submit"]))
+{
+$rollno=$_POST["rollno"];
+$name=$_POST["name"];
+$gender=$_POST["gender"];
+$mark=$_POST["mark"];
+$sql="insert into student values($rollno,'$name','$gender',$mark)";
+if(mysqli_query($conn,$sql))
+{
+echo '<script>alert("NEW RECORD ADDED SUCCESSFULLY");</script>';
+}
+else
+{
+echo "error".mysqli_error($conn);
+}
+$sql1="select * from student";
+$result=mysqli_query($conn,$sql1);
+if(mysqli_num_rows($result))
+{
+echo '<center><h1><u>STUDENT DETAILS</u></h1><table border="1" style="bordr-collapse:collapse"><tr><th>ROLL-NO</th><th>NAME</th><th>GENDER</th><th>MARK</th>';
+while($row=mysqli_fetch_assoc($result))
+{
+echo '<tr><td>'.$row["rollno"].'</td><td>'.$row["name"].'</td><td>'.$row["gender"].'</td><td>'.$row["mark"].'</td></tr>';
+
+}
+echo '</center></table>';
+}
+else
+{
+echo '<script>alert("TABLE IS EMPTY");</script>';
+}
+mysqli_close($conn);
+}
+}
+?>
