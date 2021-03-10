@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>exsc11</title>
+</head>
+<body>
+<form method="post" name="my form" >
+<table border ="2" style="background-color:red; height:70%; width:100%">
+<tr><th colspan="2" >my form</th></tr>
+<tr><td>name</td>
+<td> input type="text" name="name" required</td></tr>
+<tr><td>password</td>
+<td>input type="password" name="password">
+<tr><td colspan="2"> input type="submit"</td></tr></table></form>
+</body></html>
+<
+<?php
+if(isset($_post["submit"]))
+{
+
+$name=$_post("name");
+$password=$_post("password");
+}
+if$name=" "{
+echo'<script> alert("please enter name");</script>
+;}
+if$password=" "
+{echo'<script>alert("please enter password");</script>;}
+elseif(strlen($password<8))
+{
+echo'<script>alert("password should be less than 8 letters");</script>
+}
+?>
+
